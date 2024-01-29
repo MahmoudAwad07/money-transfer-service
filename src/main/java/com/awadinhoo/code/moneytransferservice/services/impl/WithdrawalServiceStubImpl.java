@@ -1,6 +1,7 @@
 package com.awadinhoo.code.moneytransferservice.services.impl;
 
 import com.awadinhoo.code.moneytransferservice.services.WithdrawalService;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -8,6 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ThreadLocalRandom;
 
+@Service
 public class WithdrawalServiceStubImpl implements WithdrawalService {
 
     private final ConcurrentMap<WithdrawalId, Withdrawal> requests = new ConcurrentHashMap<>();
