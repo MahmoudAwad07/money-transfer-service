@@ -1,4 +1,4 @@
-package com.awadinhoo.code.moneytransferservice.dto;
+package com.awadinhoo.code.moneytransferservice.records;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

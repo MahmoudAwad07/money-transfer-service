@@ -1,8 +1,8 @@
 package com.awadinhoo.code.moneytransferservice.services.impl;
 
 import com.awadinhoo.code.moneytransferservice.constants.Constants;
-import com.awadinhoo.code.moneytransferservice.dto.AccountRequest;
-import com.awadinhoo.code.moneytransferservice.dto.AccountResponse;
+import com.awadinhoo.code.moneytransferservice.records.AccountRequest;
+import com.awadinhoo.code.moneytransferservice.records.AccountResponse;
 import com.awadinhoo.code.moneytransferservice.entities.Account;
 import com.awadinhoo.code.moneytransferservice.entities.User;
 import com.awadinhoo.code.moneytransferservice.enums.AccountStatus;
@@ -11,6 +11,7 @@ import com.awadinhoo.code.moneytransferservice.repositories.AccountRepository;
 import com.awadinhoo.code.moneytransferservice.services.AccountService;
 import com.awadinhoo.code.moneytransferservice.services.UserService;
 import com.awadinhoo.code.moneytransferservice.validation.AccountValidationService;
+import com.awadinhoo.code.moneytransferservice.validation.UserValidationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -27,13 +28,13 @@ public class AccountServiceImpl implements AccountService {
 
     private final AccountRepository accountRepository;
     private final AccountMapper accountMapper;
-    private final UserService userService;
+    private final UserValidationService userValidationService;
     private final AccountValidationService accountValidationService;
 
     @Override
     public AccountResponse createAccount(AccountRequest accountRequest) {
 
-        User user = userService.getUserById(accountRequest.userId());
+        User user = userValidationService.checkUserIfExistAndGet(accountRequest.userId());
         Account account = accountMapper.getAccountEntityFromAccountRequest(accountRequest);
         account.setUser(user);
 
@@ -56,7 +57,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public List<AccountResponse> getAccountsByUserId(Long userId) {
 
-        User user = userService.getUserById(userId);
+        User user = userValidationService.checkUserIfExistAndGet(userId);
         return accountMapper.getListAccountResponseFromAccountEntities(
                 accountRepository.findAllByUserIdAndIsDeleted(userId, Constants.DeletionStatusValues.NOT_DELETED)
                 .orElse(new ArrayList<>()));

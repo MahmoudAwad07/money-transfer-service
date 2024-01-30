@@ -1,7 +1,7 @@
 package com.awadinhoo.code.moneytransferservice.services;
 
-import com.awadinhoo.code.moneytransferservice.dto.AccountRequest;
-import com.awadinhoo.code.moneytransferservice.dto.AccountResponse;
+import com.awadinhoo.code.moneytransferservice.records.AccountRequest;
+import com.awadinhoo.code.moneytransferservice.records.AccountResponse;
 import com.awadinhoo.code.moneytransferservice.entities.Account;
 
 import java.math.BigDecimal;

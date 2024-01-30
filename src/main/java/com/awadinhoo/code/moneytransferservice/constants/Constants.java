@@ -9,6 +9,10 @@ public class Constants {
         public static final String ACCOUNT_DELETED_SUCCESSFULLY_MESSAGE = "Account successfully deleted! Account Id :: ";
         public static final String ACCOUNT_SUSPENDED_SUCCESSFULLY_MESSAGE = "Account successfully suspended! Account Id :: ";
         public static final String USER_NOT_FOUND_MESSAGE = "User is not found for this id :: ";
+        public static final String USER_ALREADY_FOUND_WITH_THIS_EMAIL_MESSAGE = "User is already found with this email address :: ";
+        public static final String USER_ALREADY_FOUND_WITH_THIS_MOBILE_NUMBER_MESSAGE = "User is already found with this mobile number :: ";
+        public static final String USER_ID_MUST_BE_NOT_NULL_MESSAGE = "User Id must be not null";
+        public static final String USER_DELETED_SUCCESSFULLY_MESSAGE = "User Successfully deleted! User Id :: ";
         public static final String TRANSFER_MUST_BE_ON_THE_SAME_CURRENCY_MESSAGE = "Transfer must be on the same currency of the account";
         public static final String TRANSFER_TYPE_IS_NOT_SUPPORTED_MESSAGE = "Transfer type is not supported :: ";
         public static final String CASH_DEPOSITED_SUCCESSFULLY_MESSAGE = "Cash deposited successfully ";

@@ -1,4 +1,4 @@
-package com.awadinhoo.code.moneytransferservice.dto;
+package com.awadinhoo.code.moneytransferservice.records;
 
 import java.util.UUID;
 

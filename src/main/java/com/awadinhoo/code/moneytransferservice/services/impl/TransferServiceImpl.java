@@ -1,10 +1,10 @@
 package com.awadinhoo.code.moneytransferservice.services.impl;
 
 import com.awadinhoo.code.moneytransferservice.constants.Constants;
-import com.awadinhoo.code.moneytransferservice.dto.CashDepositRequest;
-import com.awadinhoo.code.moneytransferservice.dto.CashTransferRequest;
-import com.awadinhoo.code.moneytransferservice.dto.CashWithdrawalExternalAddress;
-import com.awadinhoo.code.moneytransferservice.dto.CashWithdrawalRequest;
+import com.awadinhoo.code.moneytransferservice.records.CashDepositRequest;
+import com.awadinhoo.code.moneytransferservice.records.CashTransferRequest;
+import com.awadinhoo.code.moneytransferservice.records.CashWithdrawalExternalAddress;
+import com.awadinhoo.code.moneytransferservice.records.CashWithdrawalRequest;
 import com.awadinhoo.code.moneytransferservice.entities.Account;
 import com.awadinhoo.code.moneytransferservice.entities.Transfer;
 import com.awadinhoo.code.moneytransferservice.entities.User;

@@ -2,7 +2,7 @@ package com.awadinhoo.code.moneytransferservice.controllers;
 
 
 import com.awadinhoo.code.moneytransferservice.constants.Constants;
-import com.awadinhoo.code.moneytransferservice.dto.*;
+import com.awadinhoo.code.moneytransferservice.records.*;
 import com.awadinhoo.code.moneytransferservice.services.TransferService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

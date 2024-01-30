@@ -1,4 +1,4 @@
-package com.awadinhoo.code.moneytransferservice.dto;
+package com.awadinhoo.code.moneytransferservice.records;
 
 import com.awadinhoo.code.moneytransferservice.enums.AccountStatus;
 import com.awadinhoo.code.moneytransferservice.enums.AccountType;
